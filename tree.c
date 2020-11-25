@@ -276,8 +276,6 @@ void postOrder_iter(tree_pointer root) {
 
 int find(int arr[], int instart, int inend, int key) {
 	int pos, i = instart, flag = 0;
-	printf("INSTART - %d \t INEND - %d \t DATA - %d \n", instart, inend, key);
-	fflush(stdout);
 	while (i <= inend) {
 		if (arr[i] == key) {
 			pos = i;
@@ -308,7 +306,6 @@ tree_pointer preToTree(int preorder[], int inorder[], int instart, int inend) {
 	if (instart == inend) {
 		return root;
 	}
-	//CORRECT TILL HERE
 
 	pos = find(inorder, instart, inend, root->data);
 	root->lchild = preToTree(preorder, inorder, instart, pos - 1);
@@ -334,7 +331,6 @@ tree_pointer postToTree(int postorder[], int inorder[], int instart, int inend) 
 	if (instart == inend) {
 		return root;
 	}
-	//CORRECT TILL HERE
 
 	pos = find(inorder, instart, inend, root->data);
 	root->rchild = postToTree(postorder, inorder, pos+1, inend);
