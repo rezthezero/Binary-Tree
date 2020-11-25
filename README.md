@@ -1,6 +1,8 @@
 # Binary-Tree
 C program for various functions related to binary trees
 
+Includes source file and header file.
+
 The given program involves :
 
 -> Creating a tree.
